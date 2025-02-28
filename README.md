@@ -166,8 +166,22 @@ Setup instructions:
     }
 
   GET|HEAD: api/users
+  Response: 
+    [
+        {
+            "first_name": "",
+            "last_name": "",
+            "email": ""
+        }
+    ]
 
   POST: api/users
+      Response: 
+        {
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+        }
 
   GET|HEAD: api/users/{user}
 
@@ -178,4 +192,47 @@ Setup instructions:
     {
         "message": "Deleted successfully"
     }
- 
+   GET|HEAD: api/attributes
+   [
+        {
+            "name": "",
+            "type": ""
+        }
+    ]
+
+  POST: api/attributes
+      Request: 
+        {
+          "name": "test attribute 2",
+          "type": "text"
+        }
+
+    Response: 
+    {
+        "name": "",
+        "type": "",
+        "updated_at": "",
+        "created_at": ""
+    }
+
+  GET|HEAD: api/attributes/{attribute}
+    Response: 
+    {
+        "name": "",
+        "type": "",
+    }
+
+  PUT|PATCH: api/attributes/{attribute}
+    Response: 
+    {
+        "name": "",
+        "type": "",
+        "updated_at": "",
+        "created_at": ""
+    }
+
+  DELETE: api/attributes/{attribute}
+  Response:
+    {
+        "message": "Deleted successfully"
+    }
