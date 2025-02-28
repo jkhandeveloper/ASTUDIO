@@ -17,7 +17,7 @@ class User extends Authenticatable
     protected $fillable = ['first_name', 'last_name', 'email', 'password'];
 
     
-    protected $hidden = ['password', 'remember_token'];
+    protected $hidden = ['id', 'password', 'remember_token'];
 
     public function projects(): BelongsToMany
     {
@@ -41,7 +41,7 @@ class User extends Authenticatable
     return [
         'first_name' => 'required|string',
         'last_name' => 'required|string',
-        'email' => ['required', 'email', 'exists:users,email'],
+        'email' => ['required', 'email','exists:users,email'],
     ];
 }
 }

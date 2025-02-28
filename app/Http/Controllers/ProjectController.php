@@ -14,7 +14,6 @@ class ProjectController extends ApiController
     public function index(Request $request)
     {
         $query = Project::query();
-
         if ($request->has('filters')) {
             foreach ($request->filters as $field => $filter) {
                 // Extract operator and value
@@ -46,9 +45,5 @@ class ProjectController extends ApiController
         return [$matches[1], $matches[2]];
     }
     return ['LIKE', "%$filter%"];
-}
-public function store(StoreProjectRequest $request)
-{
-    return Project::create($request->validated());
 }
 }

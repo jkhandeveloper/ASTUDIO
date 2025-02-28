@@ -9,7 +9,7 @@ class ApiController extends Controller
 {
     protected $model;
 
-    public function index()
+    public function index(Request $request)
     {
         return response()->json($this->model::all());
     }

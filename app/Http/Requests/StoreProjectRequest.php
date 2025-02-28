@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Http\Exceptions\HttpResponseException;
 
 class StoreProjectRequest extends FormRequest
 {
@@ -27,10 +28,22 @@ class StoreProjectRequest extends FormRequest
     ];
 }
 
-public function failedValidation(Validator $validator)
+public function render($request, Throwable $exception)
 {
-    throw new HttpResponseException(response()->json([
-        'errors' => $validator->errors()
-    ], 422));
+    if ($exception instanceof ValidationException) {
+        return response()->noContent(422); // Empty response with 422 status
+    }
+
+    return parent::render($request, $exception);
+}
+public function messages()
+{
+    return [
+        'name.required' => 'The project name is required.',
+        'name.string' => 'The project name must be a valid text.',
+        'name.max' => 'The project name cannot exceed 255 characters.',
+        'status.required' => 'The project status is required.',
+        'status.in' => 'The status must be either "active" or "inactive".'
+    ];
 }
 }
