@@ -31,7 +31,9 @@ Setup instructions:
     php artisan db:seed
 
    Seed will create TEST User:
+   
        email: admin@astudio.com
+   
        password: password
 
 10. API Route List
