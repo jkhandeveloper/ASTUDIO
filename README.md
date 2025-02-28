@@ -14,10 +14,10 @@ Setup instructions:
 
  6. API Route List
     
-    NOTE: Header "Accept"=>”application/json” is must
+ NOTE: Header "Accept"=>”application/json” is must
     
   POST: api/register
-    Request Body
+    Request:
         {
           "first_name": "",
           "last_name": "",
@@ -25,7 +25,7 @@ Setup instructions:
           "password": ""
         }
 
-    Response
+    Response:
         "token": "",
         "user": {
             "first_name": "",
@@ -33,13 +33,13 @@ Setup instructions:
             "email": "",
         }        
   POST: api/login
-    Request Body
+    Request:
       {
         "email": "",
         "password": ""
       }
 
-    Response
+    Response:
       "token": "",
       "user": {
           "first_name": "",
@@ -48,13 +48,15 @@ Setup instructions:
       }  
             
   POST: api/logout
-      Response
+      Response:
       {
         "message": "Logged out successfully"
       }
       
-  GET|HEAD: api/projects (Use filter like = /api/projects?filters[name]=test1)
-      Response
+  GET|HEAD: api/projects 
+      (Use filter like = /api/projects?filters[name]=test1)
+      
+      Response:
       [
       {
             "name": "",
@@ -67,13 +69,13 @@ Setup instructions:
     ]
 
   POST: api/projects
-    Request Body
+    Request:
        {
             "name": "",
             "status": ""
         }
 
-    Response
+    Response:
       [
         {
             "name": "",
@@ -86,7 +88,7 @@ Setup instructions:
       ]
 
   GET|HEAD: api/projects/{project}
-  Response
+  Response:
         {
             "name": "",
             "status": ""
