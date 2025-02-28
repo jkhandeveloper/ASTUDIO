@@ -26,9 +26,12 @@ Setup instructions:
     php artisan passport:install
        yes
        yes
+
+8. RUN Seeds
+    php artisan db:seed
    
 
- 8. API Route List
+ 10. API Route List
     
  NOTE:     
         Header "Accept"=>”application/json” is must 
