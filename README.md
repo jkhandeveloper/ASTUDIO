@@ -272,3 +272,52 @@ Setup instructions:
     {
         "message": "Deleted successfully"
     }
+    
+        
+   GET|HEAD: api/attribute-values
+   
+      Response:
+       [
+            {
+                "value": "",
+            }
+        ]
+
+  POST: api/attribute-values
+  
+      Request: 
+        {
+          "name": "",
+          "type": ""
+        }
+
+        Response: 
+        {
+            "value": "",
+            "updated_at": "",
+            "created_at": ""
+        }
+
+  GET|HEAD: api/attribute-values/{attributeValue}
+  
+        Response: 
+        {
+            "value": "",
+        }
+
+  PUT|PATCH: api/attribute-values/{attributeValue}
+  
+    Response: 
+    {
+        "value": "",
+        "updated_at": "",
+        "created_at": ""
+    }
+
+  DELETE: api/attribute-values/{attributeValue}
+  
+  Response:
+    {
+        "message": "Deleted successfully"
+    }
+
