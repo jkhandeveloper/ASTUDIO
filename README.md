@@ -79,10 +79,6 @@ Setup instructions:
       {
             "name": "",
             "status": ""
-        },
-        {
-            "name": "",
-            "status": ""
         }
     ]
 
@@ -98,10 +94,6 @@ Setup instructions:
         {
             "name": "",
             "status": "active"
-        },
-        {
-            "name": "",
-            "status": ""
         }
       ]
 
@@ -184,14 +176,26 @@ Setup instructions:
         }
 
   GET|HEAD: api/users/{user}
+      Response: 
+        {
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+        }
 
   PUT|PATCH: api/users/{user}
+      Response: 
+        {
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+        }
 
   DELETE: api/users/{user}
-  Response:
-    {
-        "message": "Deleted successfully"
-    }
+      Response:
+        {
+            "message": "Deleted successfully"
+        }
    GET|HEAD: api/attributes
    [
         {
