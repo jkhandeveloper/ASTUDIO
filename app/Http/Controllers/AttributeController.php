@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 class AttributeController extends ApiController
 {
     protected $model = Attribute::class;
+    public function index(Request $request)
+    {
+        $query = Attribute::query();
+
+        return response()->json($query->with(['values'])->get());
+    }
     public function store(Request $request)
     {
         $validated = $request->validate([
