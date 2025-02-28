@@ -19,64 +19,101 @@ Setup instructions:
   POST: api/register
     Request Body
         {
-          "first_name": "khan",
-          "last_name": "test",
-          "email": "khan@test.com",
-          "password": "password123"
+          "first_name": "",
+          "last_name": "",
+          "email": "",
+          "password": ""
         }
 
     Response
         "token": "",
         "user": {
-            "first_name": "khan",
-            "last_name": "test",
-            "email": "khan@example.com",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
         }        
   POST: api/login
-  
-      Request Body
-        {
-          "email": "khan@test.com",
-          "password": "password123"
-        }
+    Request Body
+      {
+        "email": "",
+        "password": ""
+      }
+
     Response
-            "token": "",
-            "user": {
-                "first_name": "khan",
-                "last_name": "test",
-                "email": "khan@example.com",
-            }  
+      "token": "",
+      "user": {
+          "first_name": "",
+          "last_name": "",
+          "email": "",
+      }  
             
   POST: api/logout
       Response
       {
         "message": "Logged out successfully"
       }
+      
   GET|HEAD: api/projects (Use filter like = /api/projects?filters[name]=test1)
       Response
       [
       {
-            "name": "test projects",
+            "name": "",
+            "status": ""
+        },
+        {
+            "name": "",
+            "status": ""
+        }
+    ]
+
+  POST: api/projects
+    Request Body
+       {
+            "name": "",
+            "status": ""
+        }
+
+    Response
+      [
+        {
+            "name": "",
             "status": "active"
         },
         {
-            "name": "test projects",
-            "status": "active"
+            "name": "",
+            "status": ""
         }
-    ]
-  POST: api/projects
+      ]
+
   GET|HEAD: api/projects/{project}
+  Response
+        {
+            "name": "",
+            "status": ""
+        }
+
   PUT|PATCH: api/projects/{project}
+
   DELETE: api/projects/{project}
+
   GET|HEAD: api/timesheets
+
   POST: api/timesheets
+
   GET|HEAD: api/timesheets/{timesheet}
+
   PUT|PATCH: api/timesheets/{timesheet}
+
   DELETE: api/timesheets/{timesheet}
+
   GET|HEAD: api/users
+
   POST: api/users
+
   GET|HEAD: api/users/{user}
+
   PUT|PATCH: api/users/{user}
+
   DELETE: api/users/{user}
 
  
