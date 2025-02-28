@@ -3,8 +3,18 @@ Setup instructions:
 1. Intall Apache, PHP, and mysql (OR install MAMP in Mac. XAMPP in window).
 2. Intall compser.
 3. Clone This repository (https://github.com/jkhandeveloper/ASTUDIO.git)
-4. Run migration (php artisan migrate)
-5. Install passport
+4. Update .env file
+   
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=
+    DB_USERNAME=
+    DB_PASSWORD=
+    SESSION_DRIVER=file
+   
+6. Run migration (php artisan migrate)
+7. Install passport
     composer require laravel/passport
     php artisan migrate
     php artisan passport:install
@@ -12,7 +22,7 @@ Setup instructions:
        yes
    
 
- 6. API Route List
+ 8. API Route List
     
  NOTE: Header "Accept"=>”application/json” is must
     
