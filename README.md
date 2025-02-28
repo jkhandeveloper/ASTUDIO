@@ -50,7 +50,9 @@ Setup instructions:
             "last_name": "",
             "email": "",
         }        
+        
   POST: api/login
+  
     Request:
       {
         "email": "",
@@ -66,6 +68,7 @@ Setup instructions:
       }  
             
   POST: api/logout
+  
       Response:
       {
         "message": "Logged out successfully"
@@ -76,13 +79,14 @@ Setup instructions:
       
       Response:
       [
-      {
+        {
             "name": "",
             "status": ""
         }
     ]
 
   POST: api/projects
+  
     Request:
        {
             "name": "",
@@ -98,6 +102,7 @@ Setup instructions:
       ]
 
   GET|HEAD: api/projects/{project}
+  
   Response:
         {
             "name": "",
@@ -105,6 +110,7 @@ Setup instructions:
         }
 
   PUT|PATCH: api/projects/{project}
+  
   Response:
         {
             "name": "",
@@ -112,12 +118,14 @@ Setup instructions:
         }
 
   DELETE: api/projects/{project}
+  
   Response:
     {
         "message": "Deleted successfully"
     }
 
   GET|HEAD: api/timesheets
+  
   Response:
   [
     {
@@ -128,6 +136,7 @@ Setup instructions:
  ]
 
   POST: api/timesheets
+  
   Response:
     {
         "task_name": "",
@@ -136,6 +145,7 @@ Setup instructions:
     }
 
   GET|HEAD: api/timesheets/{timesheet}
+  
   Response:
     {
         "task_name": "",
@@ -144,6 +154,7 @@ Setup instructions:
     }
 
   PUT|PATCH: api/timesheets/{timesheet}
+  
   Response:
     {
         "task_name": "",
@@ -152,12 +163,14 @@ Setup instructions:
     }
 
   DELETE: api/timesheets/{timesheet}
+  
   Response:
     {
         "message": "Deleted successfully"
     }
 
   GET|HEAD: api/users
+  
   Response: 
     [
         {
@@ -168,6 +181,7 @@ Setup instructions:
     ]
 
   POST: api/users
+  
       Response: 
         {
             "first_name": "",
@@ -176,6 +190,7 @@ Setup instructions:
         }
 
   GET|HEAD: api/users/{user}
+  
       Response: 
         {
             "first_name": "",
@@ -184,6 +199,7 @@ Setup instructions:
         }
 
   PUT|PATCH: api/users/{user}
+  
       Response: 
         {
             "first_name": "",
@@ -192,19 +208,24 @@ Setup instructions:
         }
 
   DELETE: api/users/{user}
+  
       Response:
         {
             "message": "Deleted successfully"
         }
+        
    GET|HEAD: api/attributes
-   [
-        {
-            "name": "",
-            "type": ""
-        }
-    ]
+   
+      Response:
+       [
+            {
+                "name": "",
+                "type": ""
+            }
+        ]
 
   POST: api/attributes
+  
       Request: 
         {
           "name": "test attribute 2",
@@ -220,6 +241,7 @@ Setup instructions:
     }
 
   GET|HEAD: api/attributes/{attribute}
+  
     Response: 
     {
         "name": "",
@@ -227,6 +249,7 @@ Setup instructions:
     }
 
   PUT|PATCH: api/attributes/{attribute}
+  
     Response: 
     {
         "name": "",
@@ -236,6 +259,7 @@ Setup instructions:
     }
 
   DELETE: api/attributes/{attribute}
+  
   Response:
     {
         "message": "Deleted successfully"
