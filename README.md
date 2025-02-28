@@ -227,8 +227,20 @@ Setup instructions:
       Response:
        [
             {
-                "name": "",
-                "type": ""
+                "name": "test attribute",
+                "type": "text",
+                "values": [
+                    {
+                        "value": "test",
+                        "created_at": "2025-02-28T11:54:28.000000Z",
+                        "updated_at": "2025-02-28T11:54:28.000000Z"
+                    }
+                ]
+            },
+            {
+                "name": "test attribute 2",
+                "type": "text",
+                "values": []
             }
         ]
 
