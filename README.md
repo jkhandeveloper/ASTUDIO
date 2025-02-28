@@ -29,9 +29,12 @@ Setup instructions:
 
 8. RUN Seeds
     php artisan db:seed
-   
 
- 10. API Route List
+   Seed will create TEST User:
+       email: admin@astudio.com
+       password: password
+
+10. API Route List
     
  NOTE:     
         Header "Accept"=>”application/json” is must 
