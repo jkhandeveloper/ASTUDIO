@@ -25,6 +25,7 @@ class ApiController extends Controller
 
     public function store(Request $request)
     {
+        
         $validated = $request->validate($this->model::getValidationRules());
         return response()->json($this->model::create($validated), 201);
     }

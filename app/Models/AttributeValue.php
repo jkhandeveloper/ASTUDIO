@@ -13,6 +13,7 @@ class AttributeValue extends Model
     protected $fillable = ['attribute_id', 'entity_id', 'value'];
 
     protected $hidden = [
+        'id',
         'attribute_id',
         'entity_id'
     ];
@@ -30,6 +31,8 @@ class AttributeValue extends Model
     {
         return [
             'value' => 'required|string',
+            'attribute_id' => 'required|integer',
+            'entity_id' => 'required|integer',
         ];
     }
 }

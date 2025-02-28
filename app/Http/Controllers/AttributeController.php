@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class AttributeController extends ApiController
 {
-    protected $model = Project::class;
+    protected $model = Attribute::class;
     public function store(Request $request)
     {
         $validated = $request->validate([
@@ -17,14 +17,14 @@ class AttributeController extends ApiController
         return Attribute::create($validated);
     }
 
-    public function update(Request $request, Attribute $attribute)
-    {
-        $validated = $request->validate([
-            'name' => 'sometimes|string|unique:attributes,name,' . $attribute->id,
-            'type' => 'sometimes|in:text,date,number,select',
-        ]);
+    // public function update(Request $request, Attribute $attribute)
+    // {
+    //     $validated = $request->validate([
+    //         'name' => 'sometimes|string|unique:attributes,name,' . $attribute->id,
+    //         'type' => 'sometimes|in:text,date,number,select',
+    //     ]);
 
-        $attribute->update($validated);
-        return response()->json(['message' => 'Attribute updated']);
-    }
+    //     $attribute->update($validated);
+    //     return response()->json(['message' => 'Attribute updated']);
+    // }
 }

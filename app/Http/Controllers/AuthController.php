@@ -45,7 +45,7 @@ class AuthController extends Controller
 
         $token = $user->createToken('API Token')->accessToken;
 
-        return response()->json(['token' => $token]);
+        return response()->json(['token' => $token, 'user' => $user]);
     }
 
     public function logout(Request $request)

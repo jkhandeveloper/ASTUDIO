@@ -13,8 +13,11 @@ class Timesheet extends Model
     protected $fillable = ['user_id', 'project_id', 'task_name', 'date', 'hours'];
 
     protected $hidden = [
+        'id',
         'user_id',
-        'project_id'
+        'project_id',
+        'created_at',
+        'updated_at'
     ];
 
     public function user(): BelongsTo
@@ -29,7 +32,12 @@ class Timesheet extends Model
     public static function getValidationRules()
 {
     return [
+        
         'task_name' => 'required|string',
+        'user_id' => 'required',
+        'project_id' => 'required',
+        'date' => 'required|date',
+        'hours' => 'required|integer',
     ];
 }
 }

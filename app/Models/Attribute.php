@@ -10,6 +10,7 @@ class Attribute extends Model
     use HasFactory;
 
     protected $fillable = ['name', 'type'];
+    protected $hidden = ['id', 'created_at', 'updated_at'];
 
     public function values(): HasMany
     {
@@ -20,6 +21,7 @@ class Attribute extends Model
     {
         return [
             'name' => 'required|string',
+            'type' => 'required|string',
         ];
     }
 }
