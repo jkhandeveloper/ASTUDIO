@@ -30,7 +30,9 @@ Setup instructions:
 
  8. API Route List
     
- NOTE: Header "Accept"=>”application/json” is must
+ NOTE:     
+        Header "Accept"=>”application/json” is must 
+        Bearer Token is mendatory for all API except register and login routes
     
   POST: api/register
     Request:
@@ -111,18 +113,57 @@ Setup instructions:
         }
 
   PUT|PATCH: api/projects/{project}
+  Response:
+        {
+            "name": "",
+            "status": ""
+        }
 
   DELETE: api/projects/{project}
+  Response:
+    {
+        "message": "Deleted successfully"
+    }
 
   GET|HEAD: api/timesheets
+  Response:
+  [
+    {
+        "task_name": "",
+        "date": "",
+        "hours":
+    }
+ ]
 
   POST: api/timesheets
+  Response:
+    {
+        "task_name": "",
+        "date": "",
+        "hours":
+    }
 
   GET|HEAD: api/timesheets/{timesheet}
+  Response:
+    {
+        "task_name": "",
+        "date": "",
+        "hours":
+    }
 
   PUT|PATCH: api/timesheets/{timesheet}
+  Response:
+    {
+        "task_name": "",
+        "date": "",
+        "hours":
+    }
 
   DELETE: api/timesheets/{timesheet}
+  Response:
+    {
+        "message": "Deleted successfully"
+    }
 
   GET|HEAD: api/users
 
@@ -133,5 +174,8 @@ Setup instructions:
   PUT|PATCH: api/users/{user}
 
   DELETE: api/users/{user}
-
+  Response:
+    {
+        "message": "Deleted successfully"
+    }
  
